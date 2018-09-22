@@ -45,6 +45,8 @@ $(document).ready(function () {
         },
 
         showGifs: function (event) {
+            
+            //have to use empty or the buttons repeat
             $("#gifCont").empty();
             event.preventDefault();
 
@@ -71,16 +73,18 @@ $(document).ready(function () {
                 //this is where the gifs go
                 for (var i = 0; i < response.data.length; i++) {
 
-
+                    //watched youtube tutorial for response.data[i]
                     var gifOutput = $("<div>");
                     gifOutput.addClass("gifOutput");
                     var activeGif = response.data[i].images["fixed_height"].url;
                     var stillGif = response.data[i].images["fixed_height_still"].url;
+                    
+                    //can't figure how to use rating in app per se, below mirrored from in-class movie assignment
                     var rating = response.data[i].rating;
                     console.log(rating);
                     var newGif = $("<img>");
                     gifOutput.append(newGif);
-                    newGif.attr("src", stillGif);
+                    newGif.attr("src", activeGif);
                     newGif.attr("data-animate", activeGif);
                     newGif.attr("data-still", stillGif);
                     newGif.attr("data-state", "still");
@@ -95,15 +99,15 @@ $(document).ready(function () {
 
                 }
 
-                //this is how you get the gifs to move or stop
+                //this is how you get the gifs to move or stop. why do I have to click twice to stop??? I need to switch between animate and still below???
                 $(".gif").on("click", function () {
                     var state = $(this).attr("data-state");
-                    if (state === "still") {
+                    if (state === "animate") {
+                        $(this).attr("src", $(this).data("still"));
+                        $(this).attr("data-state", "still");
+                    } else {
                         $(this).attr("src", $(this).data("animate"));
                         $(this).attr("data-state", "animate");
-                    } else {
-                        $(this).attr('src', $(this).data("still"));
-                        $(this).attr("data-state", "still");
                     }
                 });
             });
