@@ -1,0 +1,51 @@
+h1 {
+
+font-size: 95px;
+font: poppins;
+font-family: 'Gloria Hallelujah', cursive;
+text-align: center;
+
+
+}
+
+#fun {
+
+    background-image: url(../80s.jpg);
+    /*opacity: 0.6; */
+}
+
+#movie-form {
+
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    
+}
+
+body {
+
+    background-image: url(../80s.jpg);
+   
+
+}
+
+footer {
+
+    font-size: 30px;
+    text-align: center;
+}
+
+.gif {
+    border: rgb(49, 42, 90) solid 4px;
+  
+  }
+  
+  .gifCont {
+    margin: 15px;
+    display: inline-block;
+  }
+
+  .gif:hover {
+    border: rgb(203, 241, 33) solid 4px;
+
+  }
