@@ -100,6 +100,8 @@ $(document).ready(function () {
                 }
 
                 //this is how you get the gifs to move or stop. why do I have to click twice to stop??? I need to switch between animate and still below???
+                
+                //changed out "still" and "animate" below several times, still requires two clicks. unsure why
                 $(".gif").on("click", function () {
                     var state = $(this).attr("data-state");
                     if (state === "animate") {
@@ -115,13 +117,13 @@ $(document).ready(function () {
 
     }
 
-    //make buttons
+ //   make buttons
     topics.makeButtons();
 
 
-
-    $("#add-movie").click(topics.addMovie);
-    $(document).on("click", ".addMovieButton", topics.showGifs);
+//loads buttons when document is ready. took of "click"
+    $("#add-movie").ready(topics.addMovie);
+   $(document).on("click", ".addMovieButton", topics.showGifs);
 });
 
            //};
