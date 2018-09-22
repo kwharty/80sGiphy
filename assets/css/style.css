@@ -14,6 +14,13 @@ text-align: center;
     /*opacity: 0.6; */
 }
 
+#buttons-view {
+
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;  
+}
+
 #movie-form {
 
     font-size: 27px;

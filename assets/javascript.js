@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     //Start with the array of topics
     var topics = {
-        movies: ["Sixteen Candles", "Ferris Buehler's Day Off", "Willow", "Weird Science", "Desperately    Seeking Susan", "The Goonies", "E.T.", "Gremlins", "Princess Bride", "Spaceballs"],
+        movies: ["Sixteen Candles", "Ferris Buehler's Day Off", "Willow", "Weird Science", "Top Gun", "The Goonies", "E.T.", "Gremlins", "Princess Bride", "Spaceballs"],
 
 
         //make the buttons for the existing array
@@ -27,7 +27,7 @@ $(document).ready(function () {
             }
 
         },
-
+        //add buttons
         addMovie: function (event) {
             event.preventDefault();
             var userMovie = $("#movie-input").val();
@@ -64,7 +64,7 @@ $(document).ready(function () {
                 url: queryUrl,
                 method: "GET"
             }).then(function (response) {
-                 console.log(response);
+                console.log(response);
 
 
 
@@ -192,7 +192,7 @@ $(document).ready(function () {
         
         renderButtons(); */
 
-        
+
 
    // }
 
