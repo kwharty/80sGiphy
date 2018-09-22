@@ -55,7 +55,7 @@ $(document).ready(function () {
             var userSearch = $(this).data("search");
             var key = "&api_key=xn5Vzcz6J67ylLvaToFPaqTDwth1efjV";
             var limit = "&limit=10";
-            var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + userSearch + limit + key;
+            var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch + limit + key;
             console.log(queryUrl);
 
 
